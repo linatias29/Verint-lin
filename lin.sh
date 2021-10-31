@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello World" > test.txt
+echo "Hello World" > /scripts/file/test.txt

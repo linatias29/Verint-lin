@@ -4,7 +4,15 @@ pipeline {
         stage('build image') {
             steps {
                 sh 'docker build -t hello:word .'
+            }
+        }
+         stage('Install Ansible') {
+            steps {
                 sh 'apt install ansible -y'
+            }
+        }
+         stage('Run Docker Container') {
+            steps {
                 sh 'mkdir -p /data/test'
                 sh 'ansible-playbook docker-run.yaml -i localhost'
             }

@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'docker' }
     stage('Build image') {          
-            docker build -t hello:latest .
+            docker build .
        }
      stage('Test image') { 
            

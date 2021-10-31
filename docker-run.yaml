@@ -1,0 +1,6 @@
+---
+- name: run docker
+  hosts: localhost
+  tasks:
+     - name: Run docker container 
+       command: sh docker run -d --name hello-container hello:word

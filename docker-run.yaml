@@ -1,6 +1,6 @@
 ---
 - name: run docker
-  hosts: localhost
+  hosts: myhost
   connection: local 
   tasks:
      - name: Run docker container 

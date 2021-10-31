@@ -17,5 +17,10 @@ pipeline {
                 sh 'ansible-playbook docker-run.yaml -i localhost'
             }
         }
+         stage('Read file') {
+            steps {
+                sh 'cat /data/test/text.txt'
+            }
+        }
     }
 }

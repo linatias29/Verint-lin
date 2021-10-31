@@ -1,25 +1,9 @@
-pipeline { 
-    environment { 
-        
-        dockerImage = '' 
+node {    
+      def app 
+    
+    stage('Build image') {         
+       
+            app = docker.build("task8/test")    
+       }     
 
-    }
-    agent any 
-
-    stages { 
-
-        stage('Building our image') { 
-
-            steps { 
-
-                script { 
-
-                    dockerImage = docker.build("task8") 
-
-                }
-
-            } 
-
-        }
-    }
 }

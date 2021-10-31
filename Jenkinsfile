@@ -3,10 +3,8 @@ pipeline {
     stage('Build image') {          
             docker build .
        }
-     stage('Test image') { 
-           
-            sh 'echo "Tests passed"'        
-        }    
+     stage('Test image') {  
+            sh 'echo "Tests passed"'         
      }     
 
 }

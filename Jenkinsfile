@@ -14,7 +14,7 @@ pipeline {
          stage('Run Docker Container') {
             steps {
                 sh 'mkdir -p /data/test'
-                sh 'ansible-playbook docker-run.yaml -i localhost'
+                sh 'ansible-playbook docker-run.yaml -i host'
             }
         }
     }

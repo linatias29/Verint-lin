@@ -4,4 +4,4 @@
   connection: local
   tasks:
      - name: Run docker container
-       command: docker run -d --name hello-container --mount source="/data/test",target=/scripts hello:word
+       command: docker run -d --name hello-container -v /data/test:/scripts hello:word

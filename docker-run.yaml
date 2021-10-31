@@ -1,6 +1,7 @@
 ---
 - name: run docker
-  hosts: all
+  hosts: webservers
+  connection: local
   tasks:
-     - name: Run docker container 
-       command: sh docker run -d --name hello-container hello:word
+     - name: Run docker container
+       command: docker run -d --name hello-container --mount source=data,target=/scripts hello:word

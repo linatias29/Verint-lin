@@ -19,7 +19,7 @@ pipeline {
         }
          stage('Read file') {
             steps {
-                sh 'cat /data/test/text.txt'
+                sh 'cat /data/test/test.txt'
             }
         }
     }

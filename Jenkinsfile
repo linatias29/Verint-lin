@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('build image') {
             steps {
-                sh 'docker build .'
-                sh 'echo hey'
-                sh 'mvn --version'
+                sh 'docker build -t hello:word .'
             }
         }
     }

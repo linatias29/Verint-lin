@@ -1,14 +1,12 @@
-node {    
-      def app 
-    
-    stage('Build image') {         
-       
-            app = docker.build("task8/test")    
+pipeline {
+    agent { label 'docker' }
+    stage('Build image') {          
+            docker build -t hello:latest .
        }
-     stage('Test image') {           
-            app.inside {            
-             sh 'echo "Tests passed"'        
-            }    
-        }     
+     stage('Test image') { 
+           
+            sh 'echo "Tests passed"'        
+        }    
+     }     
 
 }

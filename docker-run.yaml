@@ -1,7 +1,6 @@
 ---
 - name: run docker
-  hosts: myhost
-  connection: local 
+  hosts: all
   tasks:
      - name: Run docker container 
        command: sh docker run -d --name hello-container hello:word

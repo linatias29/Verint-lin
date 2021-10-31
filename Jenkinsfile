@@ -1,10 +1,12 @@
 pipeline {
     agent { label 'docker' }
-    stage('Build image') {          
-            docker build .
-       }
-     stage('Test image') {  
-            sh 'echo "Tests passed"'         
-     }     
-
+    stages {
+        stage('build image') {
+            steps {
+                sh 'docker build .'
+                sh 'echo hey'
+                sh 'mvn --version'
+            }
+        }
+    }
 }
